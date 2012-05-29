@@ -31,61 +31,156 @@
                 var $this = $(this);
                 var items = $(settings.boxes, $this).length;
 
+                $this.children(settings.boxes + ":nth-child(1)").addClass("first-prettybox");
+                $this.children(settings.boxes + ":nth-child(n+2)").addClass("prettybox");
+
+
                 switch(items){
-                	case 1:
-                        $this.children(settings.boxes).addClass("huge");        
-                    break;
-                    case 2:
-                    case 4:
-                        $this.children(settings.boxes).addClass("large");        
+                	case 2:
+                        $this.children(settings.boxes + ":nth-child(1)").css({
+                            width: '50%', height: '50%'});
+                        $this.children(settings.boxes + ":nth-child(2)").css({
+                            width: '50%', height: '50%', top: 0, right: 0});
                     break;
                     case 3:
-                        $this.children(settings.boxes).addClass("medium");
+                        $this.children(settings.boxes).css({
+                            width: '33.33333%', height: '33.33333%'});
+                        $this.children(settings.boxes + ":nth-child(2)").css({
+                            top: 0, right: '33.33333%'});
+                        $this.children(settings.boxes + ":nth-child(3)").css({
+                            top: 0, right: 0});
+                    break;
+                    case 4:
+                        $this.children(settings.boxes).css({
+                            width: '25%', height: '25%'});
+                        $this.children(settings.boxes + ":nth-child(2)").css({
+                            top: 0, left: '25%'});
+                        $this.children(settings.boxes + ":nth-child(3)").css({
+                            top: 0, right: '25%'});
+                        $this.children(settings.boxes + ":nth-child(4)").css({
+                            top: 0, right: 0});
                     break;
                     case 5:
-                        $this.children(settings.boxes + ":nth-child(1)").addClass("large");
-                        $this.children(settings.boxes + ":nth-child(2)").addClass("large");
-                        $this.children(settings.boxes + ":nth-child(n+3)").addClass("medium");
+                        $this.children(settings.boxes + ":nth-child(1)").css({
+                            width: '50%', height: '50%'});
+                        $this.children(settings.boxes + ":nth-child(n+2)").css({
+                            width: '25%', height: '25%'});
+                        $this.children(settings.boxes + ":nth-child(2)").css({
+                            top: 0, left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(3)").css({
+                            top: 0, right: 0});
+                        $this.children(settings.boxes + ":nth-child(4)").css({
+                            top: '50%', right: '25%'});
+                        $this.children(settings.boxes + ":nth-child(5)").css({
+                            top: '50%', right: 0});
                     break;
                     case 6:
-                        $this.children(settings.boxes + ":first-child").addClass("medium");
-                        $this.children(settings.boxes + ":nth-child(n+2)").addClass("small");
-                        $this.children(settings.boxes + ":nth-child(4)").removeClass("small");
-                        $this.children(settings.boxes + ":nth-child(4)").addClass("medium");
+                        $this.children(settings.boxes + ":nth-child(1)").css({
+                            width: '33.33333%', height: '33.33333%'});
+                        $this.children(settings.boxes + ":nth-child(2)").css({
+                            width: '33.33333%', height: '33.33333%', top: 0, right: 0});
+                        $this.children(settings.boxes + ":nth-child(n+3)").css({
+                            width: '16.66667%', height: '16.66667%'});
+                        $this.children(settings.boxes + ":nth-child(3)").css({
+                            top: 0, left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(4)").css({
+                            top: 0, right: '50%'});
+                        $this.children(settings.boxes + ":nth-child(5)").css({
+                            top: '50%', left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(6)").css({
+                            top: '50%', right: '50%'});
                     break;
                     case 7:
-                        $this.children(settings.boxes + ":nth-child(1)").addClass("large");
-                        $this.children(settings.boxes + ":nth-child(2)").addClass("medium");
-                        $this.children(settings.boxes + ":nth-child(n+3)").addClass("small");
+                        $this.children(settings.boxes + ":nth-child(1)").css({
+                            width: '50%', height: '50%'});
+                        $this.children(settings.boxes + ":nth-child(2)").css({
+                            width: '33.33333%', height: '33.33333%', top: 0, right: 0});
+                        $this.children(settings.boxes + ":nth-child(n+3)").css({
+                            width: '16.66667%', height: '16.66667%'});
+                        $this.children(settings.boxes + ":nth-child(3)").css({
+                            top: 0, left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(4)").css({
+                            top: '33.33333%', left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(5)").css({
+                            top: '66.66667%', left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(6)").css({
+                            top: '66.66667%', right: 0});
+                        $this.children(settings.boxes + ":nth-child(7)").css({
+                            top: '66.66667%', right: '16.66667%'});
                     break;
                     case 8:
-                        $this.children(settings.boxes + ":nth-child(1)").addClass("large");
-                        $this.children(settings.boxes + ":nth-child(2)").addClass("medium");
-                        $this.children(settings.boxes + ":nth-child(3)").addClass("small");
-                        $this.children(settings.boxes + ":nth-child(4)").addClass("small");
-                        $this.children(settings.boxes + ":nth-child(5)").addClass("small");
-                        $this.children(settings.boxes + ":nth-child(6)").addClass("small");
-                        $this.children(settings.boxes + ":nth-child(7)").addClass("small");
-                        $this.children(settings.boxes + ":nth-child(8)").addClass("huge");
+                        $this.children(settings.boxes + ":nth-child(1)").css({
+                            width: '42.8571429%', height: '42.8571429%'});
+                        $this.children(settings.boxes + ":nth-child(n+2)").css({
+                            width: '21.4285714%', height: '21.4285714%'});
+                        $this.children(settings.boxes + ":nth-child(2)").css({
+                            top: 0, left: '42.8571429%'});
+                        $this.children(settings.boxes + ":nth-child(3)").css({
+                            top: '50%', left: '42.8571429%'});
+                        $this.children(settings.boxes + ":nth-child(4)").css({
+                            top: 0, right: '14.3%'});
+                        $this.children(settings.boxes + ":nth-child(5)").css({
+                            top: '50%', right: '14.3%'});
+                        $this.children(settings.boxes + ":nth-child(n+6)").css({
+                            width: '14.2857143%', height: '14.2857143%'});
+                        $this.children(settings.boxes + ":nth-child(6)").css({
+                            top: 0, right: 0});
+                        $this.children(settings.boxes + ":nth-child(7)").css({
+                            top: '33.33333%', right: 0});
+                        $this.children(settings.boxes + ":nth-child(8)").css({
+                            top: '66.66667%', right: 0});
                     break;
                     case 9:
-                        $this.children(settings.boxes + ":nth-child(1)").addClass("medium");
-                        $this.children(settings.boxes + ":nth-child(n+2)").addClass("small");        
+                        $this.children(settings.boxes + ":nth-child(1)").css({
+                            width: '33.3333333%', height: '33.3333333%'});
+                        $this.children(settings.boxes + ":nth-child(n+2)").css({
+                            width: '16.6666667%', height: '16.6666667%'});
+                        $this.children(settings.boxes + ":nth-child(2)").css({
+                            top: 0, left: '33.3333333%'});
+                        $this.children(settings.boxes + ":nth-child(3)").css({
+                            top: '50%', left: '33.3333333%'});
+                        $this.children(settings.boxes + ":nth-child(4)").css({
+                            top: 0, left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(5)").css({
+                            top: '50%', left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(6)").css({
+                            top: 0, right: '16.7%'});
+                        $this.children(settings.boxes + ":nth-child(7)").css({
+                            top: '50%', right: '16.7%'});
+                        $this.children(settings.boxes + ":nth-child(8)").css({
+                            top: 0, right: 0});
+                        $this.children(settings.boxes + ":nth-child(9)").css({
+                            top: '50%', right: 0});
+                    break
+                    case 10:
+                        $this.children(settings.boxes + ":nth-child(1)").css({
+                            width: '50%', height: '50%'});
+                        $this.children(settings.boxes + ":nth-child(n+2)").css({
+                            width: '16.6666667%', height: '16.6666667%'});
+                        $this.children(settings.boxes + ":nth-child(2)").css({
+                            top: 0, left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(3)").css({
+                            top: '33.3333333%', left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(4)").css({
+                            top: '66.6666666%', left: '50%'});
+                        $this.children(settings.boxes + ":nth-child(5)").css({
+                            top: 0, right: '16.7%'});
+                        $this.children(settings.boxes + ":nth-child(6)").css({
+                            top: '33.3333333%', right: '16.7%'});
+                        $this.children(settings.boxes + ":nth-child(7)").css({
+                            top: '66.6666666%', right: '16.7%'});
+                        $this.children(settings.boxes + ":nth-child(8)").css({
+                            top: 0, right: 0});
+                        $this.children(settings.boxes + ":nth-child(9)").css({
+                            top: '33.3333333%', right: 0});
+                        $this.children(settings.boxes + ":nth-child(10)").css({
+                            top: '66.6666666%', right: 0});
                     break
                 }
 
                 $this.wrap('<div class="wrapper" />');
                 $this.addClass("prettyboxes");
 
-                $('.prettyboxes').masonry({
-                    itemSelector: 'li',
-                    isAnimated: true,
-                    gutterWidth: 0,
-                    isResizable: true,
-                    isFitWidth: true,
-                    columnWidth: 160
-                });                
-                
             });
         }
     });

@@ -18,6 +18,7 @@
 
 }
 
+
 .prettyboxes {
 	padding: 0;
 	margin: 0 auto;
@@ -27,54 +28,44 @@
 	-ms-box-shadow: 0 2px 5px black;
 	-o-box-shadow: 0 2px 5px black;
 	box-shadow: 0 2px 5px black;
-}
-
-.huge, .large, .medium, .small {
-	float: left;
-	display: box;
-	box-sizing: border-box;
 	position: relative;
-	margin: 0;
-	line-height: 0;
-	border: 1px solid black;
-	max-width: 100%;
-}
-
-/*.bump {
-	position: absolute;
-	bottom: 16.6666667%;
-	right: 16.6666667%;
-}
-
-.bump2 {
-	right: 33.3333333333%;
-}*/
-
-.huge img, .large img, .medium img, .small img {
 	width: 100%;
+	height: 100%;
+}
+
+.first-prettybox {
+	position: relative;
+	line-height: 0;
+}
+
+.first-prettybox img {
+	max-width: 100%;
 	height: auto;
 }
 
-.huge {
-	/*100%*/
-	width: 960px;
-	height: 960px;
+.prettybox {
+	position: absolute;
 }
 
-.large {
-	/*50%*/
-	width: 480px;
-	height: 480px;
+.prettybox img {
+	position: static;
+	max-width: 100%;
+	height: auto;
 }
 
-.medium {
-	/*33.3333333333%*/
-	width: 320px;
-	height: 320px;
+
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+	.wrapper {
+		padding: 2.5%;
+	}
 }
 
-.small {
-	/*16.6666667%*/
-	width: 160px;
-	height: 160px;
+/* Smart Phones */
+@media screen and (max-width: 480px) {
+	.wrapper {
+		padding: 0;
+	}
 }
+
